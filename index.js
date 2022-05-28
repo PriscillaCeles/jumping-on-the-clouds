@@ -1,22 +1,25 @@
-const list = [0, 0, 1, 0, 0, 1, 0]
+const c = [0, 0, 1, 0, 0, 1, 0]
+const d = [0, 0, 0, 1, 0, 0]
 
-function jumpingOnClouds(){
+function jumpingOnClouds(array){
   let cloudsCount = 0
   
-  for (let i = 0; i < list.length; i++) {
-    if (list[i+2] === 0){
+  for (let i = 0; i < array.length; i++) {
+    if (array[i+2] === 0){
       cloudsCount++
       i++
-    } else if (list[i+1] === 0){
+    } else if (array[i+1] === 0){
       cloudsCount++
     } 
   }
   return cloudsCount
 }
 
-const contagem = jumpingOnClouds()
+jumpingOnClouds(c)
+jumpingOnClouds(d)
 
-console.log(`São necessários ${contagem} movimentos`)
+console.log(`São necessários ${jumpingOnClouds(c)} movimentos para c`)
+console.log(`São necessários ${jumpingOnClouds(d)} movimentos para d`)
 
 //* CODE FOR SITE */
 function jumpingOnClouds(c) {
